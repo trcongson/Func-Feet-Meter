@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Func-Feet-Meter</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><b>Amount</b></td>
+        <td><b>From</b></td>
+        <td><b>To</b></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input id="amount" type="number" style="width: 100px; height: 23px;"></td>
+        <td>
+            <select id="from" style="width: 160px; height: 30px;">
+                <option value="1">Feet</option>
+                <option value="3.279 ">Meter</option>
+            </select>
+        </td>
+        <td>
+            <select id="to" style="width: 120px; height: 30px;">
+                <option value="1">Feet</option>
+                <option value="3.279 ">Meter</option>
+            </select>
+        </td>
+        <id>
+            <input type="button" value="Convert?" onclick="start()"
+                   style="color: black; font-size: 20px; background-color: azure; width: 120px; height: 30px;">
+        </id>
+    </tr>
+</table>
+<br>
+<br>
+<div style="color: coral; font-size: 30px;">
+    Result:
+    <output id="output" style="width: 500px"></output>
+</div>
+<script>
+    function start() {
+        let from = document.getElementById("from")[document.getElementById("from").selectedIndex].value;
+        from
+        parseFloat(from);
+        let to = document.getElementById("to")[document.getElementById("to").selectedIndex].value;
+        to
+        parseFloat(to);
+        let amount = document.getElementById("amount").value;
+        amount = parseFloat(amount);
+        let dapan = (amount * to) / from;
+        document.getElementById("output").innerHTML = dapan;
+    }
+</script>
+</body>
+</html>
